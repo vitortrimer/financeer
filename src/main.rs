@@ -1,5 +1,8 @@
 use actix_web::{get, middleware::Logger, App, HttpResponse, HttpServer, Responder};
 
+pub mod application;
+pub mod domain;
+
 #[get("/api/healthcheck")]
 async fn health_check_handler() -> impl Responder {
     const MESSAGE: &str = "Financeer web services is running";
